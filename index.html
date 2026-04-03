@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>salut</title>
+  <title>Tu viens à Deauville ? 💙</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,13 +18,13 @@
       margin-bottom: 30px;
     }
 
-    .gif-box img {
-      width: 400px;
+    .image-box img {
+      width: 400px;       /* grosse taille de l'image */
       max-width: 90vw;
       height: auto;
       margin-bottom: 30px;
     }
-    
+
     .buttons {
       display: flex;
       justify-content: center;
@@ -59,9 +59,9 @@
 
   <h1>Tu viens avec moi à Deauville ?</h1>
 
-  <div class="gif-box">
-    <!-- Remplace "minions.gif" par le nom exact de ton GIF téléchargé -->
-    <img src="Capture d’écran 2026-04-03 à 21.29.05.png" alt="Minion GIF">
+  <div class="image-box">
+    <!-- Remplace "deauville.jpg" par le nom exact de ton image téléchargée -->
+    <img src="deauville.jpg" alt="Image Deauville">
   </div>
 
   <div class="buttons">
@@ -77,11 +77,11 @@
 
     // Quand on clique sur "Non", le bouton "Oui" grossit
     noBtn.addEventListener('click', () => {
-      scale += 0.5; // grossit plus rapidement
+      scale += 0.5; // agrandissement rapide
       yesBtn.style.transform = `scale(${scale})`;
     });
 
-    // Quand on clique sur "Oui", change le texte mais continue à grossir si on clique sur "Non"
+    // Quand on clique sur "Oui", change le texte mais le bouton continue de grossir si on clique sur "Non"
     yesBtn.addEventListener('click', () => {
       yesBtn.textContent = "Let's go !";
       yesBtn.style.background = '#0ea5e9';
