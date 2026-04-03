@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>salut</title>
+  <title>Tu viens à Deauville ? 💙</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,28 +11,23 @@
       text-align: center;
       padding: 40px 20px;
     }
-
     h1 {
       font-size: 1.8rem;
       font-weight: normal;
       margin-bottom: 30px;
     }
-
     .gif-box img {
       width: 400px;
       max-width: 90vw;
       height: auto;
       margin-bottom: 30px;
     }
-    
     .buttons {
       display: flex;
       justify-content: center;
       gap: 20px;
       margin-bottom: 30px;
-      position: relative;
     }
-
     button {
       border: none;
       border-radius: 999px;
@@ -42,17 +37,8 @@
       cursor: pointer;
       transition: transform 0.25s ease, background 0.25s ease;
     }
-
-    #yesBtn {
-      background: #28c76f;
-      color: white;
-      transform: scale(1);
-    }
-
-    #noBtn {
-      background: #ff5d73;
-      color: white;
-    }
+    #yesBtn { background: #28c76f; color: white; transform: scale(1); }
+    #noBtn { background: #ff5d73; color: white; }
   </style>
 </head>
 <body>
@@ -60,7 +46,6 @@
   <h1>Tu viens avec moi à Deauville ?</h1>
 
   <div class="gif-box">
-    <!-- Remplace "minions.gif" par le nom exact de ton GIF téléchargé -->
     <img src="minions.gif" alt="Minion GIF">
   </div>
 
@@ -72,19 +57,11 @@
   <script>
     const yesBtn = document.getElementById('yesBtn');
     const noBtn = document.getElementById('noBtn');
-
     let scale = 1;
 
-    // Quand on clique sur "Non", le bouton "Oui" grossit
     noBtn.addEventListener('click', () => {
-      scale += 0.5; // grossit plus rapidement
+      scale += 0.5;
       yesBtn.style.transform = `scale(${scale})`;
-    });
-
-    // Quand on clique sur "Oui", change le texte mais continue à grossir si on clique sur "Non"
-    yesBtn.addEventListener('click', () => {
-      yesBtn.textContent = "Let's go !";
-      yesBtn.style.background = '#0ea5e9';
     });
   </script>
 
