@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>salut</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: normal;
+      text-align: center;
+      z-index: 5;
+    }
+
+    .gif-box img {
+      width: 400px;
+      max-width: 90vw;
+      height: auto;
+      z-index: 0;
+      position: relative;
+    }
+
+    #yesBtn, #noBtn {
+      border: none;
+      border-radius: 999px;
+      padding: 14px 32px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    #yesBtn {
+      background: #28c76f;
+      color: white;
+      z-index: 10;
+      /* position relative dans le container pour rester centré */
+    }
+
+    #noBtn {
+      background: #ff5d73;
+      color: white;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tu viens avec moi à Deauville ?</h1>
+
+    <div class="gif-box">
+      <img src="minions love GIF.gif" alt="Minion GIF">
+    </div>
+
+    <button id="yesBtn">Oui</button>
+    <button id="noBtn">Non</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    let scale = 1;
+
+    noBtn.addEventListener('click', () => {
+      scale *= 1.8; // grossit exponentiellement
+      yesBtn.style.transform = `scale(${scale})`;
+    });
+  </script>
+
+</body>
+</html>
